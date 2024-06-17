@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepFake Detection</title>
+    <link rel="stylesheet" href="../static/css/LandingPage.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h1 class="heading">
+            DEEPFAKE DETECTION
+        </h1>
+        <p id="content"></p>
+        <button type="submit" class="getStarted">
+            <a href="/index">Get Started</a>
+            
+
+            
+        </button>
+
+
+    </div>
+    <script>
+        const text = "Fake Shield에 오신 것을 환영합니다! 저희의 고급 인공지능 알고리즘은 비디오를 분석하여 조작이나 변조의 징후를 탐지합니다. Fake shield는 딥페이크의 확산을 방지하고 디지털 미디어의 무결성을 보장하기 위한 신뢰할 수 있고 효율적인 솔루션을 제공하는 것입니다. 저희 플랫폼을 통해 비디오를 업로드하여 분석을 요청하시면, 결과를 제공해 드립니다.";
+    
+        const contentElement = document.getElementById("content");
+        let index = 0;
+    
+        function displayText() {
+          if (index < text.length) {
+            contentElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(displayText, 15); // Adjust the delay (in milliseconds) between each letter here
+          }
+        }
+    
+        displayText();
+
+
+      </script>
+</body>
+
+</html>
